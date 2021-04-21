@@ -9,18 +9,19 @@
     --RocknRoll: 'RocknRoll One', sans-serif;
     --not-white: #fffaf3;
     --not-pink: #ebbcba;
-    --not-gray: #2a273f;
     --not-black: #1f1d2e;
     --dark-blue: #286983;
     --light-blue: #9ccfd8;
-    --text: #575279;
+
 }
 
 body {
     font-family: var(--RocknRoll);
     background-color: var(--light-blue);
+    color: var(--not-black);
     text-align: center;
 }
+
 h1 {
     font-family: var(--flower);
 }
@@ -29,7 +30,6 @@ h1 {
     display: flex;
     flex-direction: column;
 }
-
 
 .nav > ul {
     list-style: none;
@@ -65,7 +65,6 @@ nav li, .section-header, .shop-item p {
 
 .cart {
     background-color: var(--not-pink);
-    /* width: 95%; */
     display: flex;
     flex-direction: column;
     margin: 1rem;
