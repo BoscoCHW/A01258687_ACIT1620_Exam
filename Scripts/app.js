@@ -25,12 +25,26 @@ const shopItemsElement = document.querySelector('.shop-items')
 shopItemsElement.addEventListener('click', addToCart, true)
 
 function addToCart(ev) {
-    if (ev.target.tagName === 'IMG') {
-        let imgElementID = ev.target.id
-        let cartElement = document.querySelector('.cart')
-        let albumName = imgElementID.slice(0, imgElementID.length-1) + " " + imgElementID.slice(imgElementID.length-1, imgElementID.length)
-        let album = albums.find(item => item.name === albumName)
-        cartElement.insertAdjacentHTML('beforeend', cartItemTemplate(album))
-    }
 
+    if (ev.target.tagName === 'IMG') {
+
+        let imgElementID = ev.target.id
+        let albumName = imgElementID.slice(0, imgElementID.length-1) + " " + imgElementID.slice(imgElementID.length-1, imgElementID.length)
+        
+        for (item of albums) {
+            
+            if(item.name === albumName) {
+                let album = item
+                console.log(album)
+                if (album.inCart === false) {
+                    item.inCart = true
+                    const cartElement = document.querySelector('.cart')
+                    cartElement.insertAdjacentHTML('beforeend', cartItemTemplate(album))
+                 } else {
+                     alert("The item is already in cart.")
+                 }
+
+            }
+        }
+    }
 }
