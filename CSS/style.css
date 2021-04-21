@@ -47,6 +47,13 @@ nav li, .section-header, .shop-item p {
     color: var(--not-white);
 }
 
+@media screen and (min-width: 640px) {
+    .shop-items {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 .shop-item {
     margin-top: 1rem;
