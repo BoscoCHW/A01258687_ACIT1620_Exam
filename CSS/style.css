@@ -59,6 +59,10 @@ nav li, .section-header, .shop-item p {
     margin-top: 1rem;
 }
 
+.shop-item > img {
+    cursor: pointer;
+}
+
 .cart {
     background-color: var(--not-pink);
     /* width: 95%; */
