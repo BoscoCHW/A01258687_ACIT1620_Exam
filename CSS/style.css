@@ -1,0 +1,18 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --flower: 'Indie Flower', cursive;
+    --RocknRoll: 'RocknRoll One', sans-serif;
+    --not-white: #fffaf3;
+    --not-pink: #ebbcba;
+    --not-gray: #2a273f;
+    --not-black: #1f1d2e;
+    --dark-blue: #286983;
+    --light-blue: #9ccfd8;
+    --text: #575279;
+}
+
