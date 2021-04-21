@@ -70,4 +70,14 @@ nav li, .section-header, .shop-item p {
 .cart-row {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cart-row > span {
+    width: 15rem;
+}
+
+.cart-row img {
+    width: 80%
 }
