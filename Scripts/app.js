@@ -18,13 +18,19 @@ const imgElements = document.querySelectorAll('.shop-item-image')
 const imgElementsList = Array.from(imgElements)
 imgElementsList.forEach(imgElement => {
     imgElement.src = `Images/${imgElement.id}.png`
-    imgElement.addEventListener('click', addToCart)
+ 
 })
 
+const shopItemsElement = document.querySelector('.shop-items')
+shopItemsElement.addEventListener('click', addToCart, true)
+
 function addToCart(ev) {
-    let imgElementID = ev.target.id
-    let cartElement = document.querySelector('.cart')
-    let albumName = imgElementID.slice(0, imgElementID.length-1) + " " + imgElementID.slice(imgElementID.length-1, imgElementID.length)
-    let album = albums.find(item => item.name === albumName)
-    cartElement.insertAdjacentHTML('beforeend', cartItemTemplate(album))
+    if (ev.target.tagName === 'IMG') {
+        let imgElementID = ev.target.id
+        let cartElement = document.querySelector('.cart')
+        let albumName = imgElementID.slice(0, imgElementID.length-1) + " " + imgElementID.slice(imgElementID.length-1, imgElementID.length)
+        let album = albums.find(item => item.name === albumName)
+        cartElement.insertAdjacentHTML('beforeend', cartItemTemplate(album))
+    }
+
 }
